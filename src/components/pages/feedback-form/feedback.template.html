@@ -1,0 +1,41 @@
+
+<section>
+    <form class="padding" (ngSubmit)="submitForm()">
+        <!-- <app-field type="input"></app-field> -->
+        
+        <!-- <app-field type="input"></app-field> -->
+        
+        <!-- <app-field type="input"></app-field> -->
+
+        <!-- <app-field type="input"></app-field> -->
+
+        <label>
+            <span>Name</span>
+            <input type="text" required />
+        </label>
+
+        <label>
+            <span>Company name</span>
+            <input type="text" required />
+        </label>
+
+        <label>
+            <span>Job title</span>
+            <input type="text" required />
+        </label>
+
+        <label>
+            <span>Years in current role</span>
+            <input type="number" required maxlength="2" max="99" min="0" />
+        </label>
+
+        <label>
+            <span>What do you like about marketing corp?</span>
+            <textarea></textarea>
+        </label>
+
+        <div class="flex right">
+            <button>Submit</button>
+        </div>
+    </form>
+</section>
