@@ -1,6 +1,6 @@
 
 <section>
-    <form class="padding" (ngSubmit)="submitForm()">
+    <form class="padding" (ngSubmit)="submitForm($event)" #formElement>
         <!-- <app-field type="input"></app-field> -->
         
         <!-- <app-field type="input"></app-field> -->
@@ -11,31 +11,32 @@
 
         <label>
             <span>Name</span>
-            <input type="text" required />
+            <input type="text" name="Name" required minlength="6" />
         </label>
 
         <label>
             <span>Company name</span>
-            <input type="text" required />
+            <input type="text" name="CompanyName" (input)="updateCompanyName()" required />
         </label>
 
         <label>
             <span>Job title</span>
-            <input type="text" required />
+            <input type="text" name="JobTitle" required />
         </label>
 
         <label>
             <span>Years in current role</span>
-            <input type="number" required maxlength="2" max="99" min="0" />
+            <input type="number" name="YearsInRole" required maxlength="2" max="49" min="1" />
         </label>
 
         <label>
             <span>What do you like about marketing corp?</span>
-            <textarea></textarea>
+            <textarea name="FeedBack" required></textarea>
         </label>
 
         <div class="flex right">
             <button>Submit</button>
+            <button type="button" (click)="clearForm()">Clear</button>
         </div>
     </form>
 </section>
